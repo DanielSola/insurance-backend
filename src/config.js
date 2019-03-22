@@ -1,4 +1,5 @@
 import sentry from 'cfg/sentry';
+import pathAuth from 'cfg/pathAuth';
 
 const {
   CLIENTS_API_URL,
@@ -13,4 +14,5 @@ module.exports = {
   PORT,
   SECRET,
   sentry,
+  pathAuth,
 };

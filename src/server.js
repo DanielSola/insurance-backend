@@ -6,7 +6,7 @@ import '@babel/polyfill';
 
 import routes from 'routes';
 import logger from 'logger';
-import { security } from 'middlewares';
+import { security, authorization } from 'middlewares';
 
 const app = express();
 
@@ -21,6 +21,7 @@ app.use(cors());
 
 Object.keys(routes).forEach(key => {
   app.use(`/${key}`, security);
+  app.use(`/${key}`, authorization);
   app.use(`/${key}`, routes[key]);
 });
 
