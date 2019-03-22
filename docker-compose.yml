@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  insurance-backend:
+    image: ${REGISTRY}/insurance-backend:${TAG}
+    container_name: insurance-backend
+    build:
+      context: .
+      args:
+        BUILD_ENV: $NODE_ENV

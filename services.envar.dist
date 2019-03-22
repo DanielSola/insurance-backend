@@ -1,0 +1,19 @@
+# API GLOBAL
+export NODE_ENV=foo
+export PORT=foo
+export SECRET=foo
+export VERBOSE=info
+
+# API URLS
+export CLIENTS_API_URL=foo
+export POLICIES_API_URL=bar
+
+#Docker
+export REGISTRY=test
+export TAG=latest
+
+#SENTRY
+export SENTRY_ENVIRONMENT=foo
+export SENTRY_API_KEY=foo:bar
+export SENTRY_URL=foo
+export SENTRY_ID=id

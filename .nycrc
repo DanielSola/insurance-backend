@@ -1,0 +1,12 @@
+{
+  "exclude": [
+    "**/__test__"
+  ],
+  "reporter": [
+    "html",
+    "text"
+  ],
+  "cache": false,
+  "sourceMap": false,
+  "instrument": false
+}

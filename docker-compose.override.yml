@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  insurance-backend:
+    environment:
+      PORT: $PORT
+      SECRET: $SECRET
+      SENTRY_ENVIRONMENT: $SENTRY_ENVIRONMENT
+      SENTRY_API_KEY: $SENTRY_API_KEY
+      SENTRY_URL: $SENTRY_URL
+      SENTRY_ID: $SENTRY_ID
+      CLIENTS_API_URL: $CLIENTS_API_URL
+      POLICIES_API_URL: $POLICIES_API_URL
+      LOG: 1
+      VERBOSE: $VERBOSE
+    volumes:
+      - ./src:/app/src
+    ports:
+      - $PORT:$PORT
+
+networks:
+  default:
+    external:
+      name: development
