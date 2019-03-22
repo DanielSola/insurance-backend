@@ -4,6 +4,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import '@babel/polyfill';
 
+import routes from 'routes';
 import logger from 'logger';
 
 const app = express();
@@ -16,6 +17,10 @@ const {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
+
+Object.keys(routes).forEach(key => {
+  app.use(`/${key}`, routes[key]);
+});
 
 app.get('/', (req, res) => {
   res.send('Insurance API REST is running...');
