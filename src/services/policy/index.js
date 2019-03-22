@@ -1,3 +1,4 @@
 import blGetPoliciesByName from './blGetPoliciesByName';
+import blGetPolicyById from './blGetPolicyById';
 
-export { blGetPoliciesByName };
+export { blGetPoliciesByName, blGetPolicyById };

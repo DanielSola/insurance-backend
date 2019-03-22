@@ -10,7 +10,12 @@ const paths = [
   {
       route: "/policy/name",
       authorizedRoles: ["admin"],
-  }
+  },
+  {
+    route: "/policy/policyId",
+    authorizedRoles: ["admin"],
+},
+
 ];
 
 export default paths;
