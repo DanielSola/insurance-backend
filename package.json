@@ -1,0 +1,26 @@
+{
+  "name": "insurance-backend",
+  "version": "1.0.0",
+  "description": "Insurance API rest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielSola/insurance-backend.git"
+  },
+  "keywords": [
+    "API",
+    "rest",
+    "backend",
+    "demo",
+    "test"
+  ],
+  "author": "Daniel Solá",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielSola/insurance-backend/issues"
+  },
+  "homepage": "https://github.com/DanielSola/insurance-backend#readme"
+}
