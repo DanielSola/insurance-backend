@@ -13,7 +13,7 @@ const getPolicyById = async (req, res) => {
     blFunction: blGetPolicyById,
     errorMsg: '/policy/policyId/ error',
     res,
-  })({ policyId });
+  })(policyId);
 };
 
 export default getPolicyById;

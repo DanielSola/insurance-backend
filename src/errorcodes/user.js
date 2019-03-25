@@ -1,4 +1,4 @@
 export const UserNotFound = {
-    httpCode: 422,
+    httpCode: 404,
     message: 'User not found',
 };

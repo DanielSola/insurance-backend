@@ -13,7 +13,7 @@ const getUserByName = async (req, res) => {
     blFunction: blGetUserByName,
     errorMsg: '/user/name/ error',
     res,
-  })({ userName });
+  })(userName);
 };
 
 export default getUserByName;

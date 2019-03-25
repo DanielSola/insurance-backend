@@ -13,7 +13,7 @@ const getUserById = async (req, res) => {
     blFunction: blGetUserById,
     errorMsg: '/user/id/ error',
     res,
-  })({ userId });
+  })(userId);
 };
 
 export default getUserById;

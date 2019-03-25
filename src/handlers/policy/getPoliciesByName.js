@@ -13,7 +13,7 @@ const getPoliciesByName = async (req, res) => {
     blFunction: blGetPoliciesByName,
     errorMsg: '/policy/name/ error',
     res,
-  })({ userName });
+  })(userName);
 };
 
 export default getPoliciesByName;

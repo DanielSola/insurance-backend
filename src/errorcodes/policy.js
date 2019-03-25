@@ -1,4 +1,4 @@
 export const PolicyNotFound = {
-    httpCode: 422,
+    httpCode: 404,
     message: 'Policy not found',
 };
