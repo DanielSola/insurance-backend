@@ -14,6 +14,7 @@ const saveRequestQuery = {
 
 const saveRequest = async ({ userEmail, resource, pool = PostgresSQLService.getPool() }) => {
   const values = [userEmail, resource];
+
   return await pool.query(saveRequestQuery, values);
 };
 

@@ -4,7 +4,7 @@ import {
   UserNotFound as UserNotFoundError,
   UserNotAuthorized as UserNotAuthorizedError,
 } from 'errorcodes/api';
-import CompanyAPIService from 'services/CompanyAPIService'
+import CompanyAPIService from 'services/CompanyAPIService';
 
 const authorization = async (req, res, next) => {
   const requestPath = req.originalUrl;
@@ -15,17 +15,17 @@ const authorization = async (req, res, next) => {
   }
 
   const { clients } = await CompanyAPIService.getClients();
-  const user = clients.find(({email}) => email === userEmail);
+  const user = clients.find(({ email }) => email === userEmail);
 
-  if(!user){
+  if(!user) {
     res.status(UserNotFoundError.httpCode).send(UserNotFoundError.message);
   }
 
   const { role: userRole } = user;
   const { authorizedRoles } = pathAuth.find(({ route }) => requestPath.match(route));
-  const isAuth = authorizedRoles.includes(userRole)
+  const isAuth = authorizedRoles.includes(userRole);
 
-  if(!isAuth){
+  if(!isAuth) {
     res.status(UserNotAuthorizedError.httpCode).send(UserNotAuthorizedError.message);
   }
 

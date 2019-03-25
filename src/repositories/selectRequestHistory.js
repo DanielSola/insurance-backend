@@ -2,11 +2,11 @@ import PostgresSQLService from 'services/PostgresSQLService';
 
 const selectRequestHistoryQuery = {
   name: 'select-request-history',
-  text: 
+  text:
   `SELECT
     *
   FROM
-    request_history`
+    request_history`,
 };
 
 const selectRequestHistory = async ({ pool = PostgresSQLService.getPool() }) => {

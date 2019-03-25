@@ -4,7 +4,7 @@ import { PolicyNotFound } from 'errorcodes/policy';
 
 const blGetPolicyById = async ({ policyId }) => {
   const { policies } = await CompanyAPIService.getPolicies();
-  const policy = policies.find(({id}) => id === policyId);
+  const policy = policies.find(({ id }) => id === policyId);
 
   if(!policy) {
     throw new CustomError(PolicyNotFound);

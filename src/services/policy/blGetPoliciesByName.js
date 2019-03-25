@@ -12,7 +12,7 @@ const blGetPoliciesByName = async ({ userName }) => {
   
   const { id } = user;
   const { policies } = await CompanyAPIService.getPolicies();
-  const clientPolicies = policies.filter(({clientId}) => clientId === id);
+  const clientPolicies = policies.filter(({ clientId }) => clientId === id);
 
   return clientPolicies;
 };

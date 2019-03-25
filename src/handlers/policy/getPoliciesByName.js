@@ -5,7 +5,8 @@ import { saveRequest } from 'repositories';
 const getPoliciesByName = async (req, res) => {
   const userEmail = req.header('email');
   const resource = req.route.path;
-  await saveRequest({userEmail, resource});
+
+  await saveRequest({ userEmail, resource });
 
   const { params: userName } = req;
 

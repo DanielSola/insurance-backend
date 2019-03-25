@@ -40,16 +40,16 @@ test('services/CompanyAPIService ', t => {
   });
   
   t.test('CompanyAPIService/getPolicies success', async ({ deepEqual, ok, end }) => {
-      getStub.resolves({ body: response });
-      const policies = await CompanyAPIService.getPolicies();
+    getStub.resolves({ body: response });
+    const policies = await CompanyAPIService.getPolicies();
       
-      ok(getStub.calledWith(POLICIES_API_URL), 'Should do policies request');
-      deepEqual(policies, response, 'Should return clients');
+    ok(getStub.calledWith(POLICIES_API_URL), 'Should do policies request');
+    deepEqual(policies, response, 'Should return clients');
       
-      getStub.reset();
+    getStub.reset();
       
-      end();
-    });
+    end();
+  });
     
   t.test('CompanyAPIService/getPolicies error', async ({ deepEqual, ok, end }) => {
     getStub.throws();

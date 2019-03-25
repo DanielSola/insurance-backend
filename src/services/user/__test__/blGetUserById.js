@@ -6,7 +6,7 @@ import CustomError from 'CustomError';
 
 const CompanyAPIServiceMock = {
   '@noCallThru': true,
-   getClients: stub(),
+  getClients: stub(),
 };
 
 
@@ -15,7 +15,7 @@ const nonExistingId = 4321;
 
 const expectedUser = { name: 'john', id: existingId };
 const clientsMock = {
-    clients: [expectedUser]
+  clients: [expectedUser],
 };
 
 const blGetUserById = proxyquire('../blGetUserById', {
@@ -25,7 +25,7 @@ const blGetUserById = proxyquire('../blGetUserById', {
 test('blGetUserById', t => {
   t.test('blGetUserById returns user', async ({ ok, deepEqual, end }) => {
     CompanyAPIServiceMock.getClients.resolves(clientsMock);
-    const user = await blGetUserById({userId: existingId});
+    const user = await blGetUserById({ userId: existingId });
 
     ok(CompanyAPIServiceMock.getClients.calledOnce, 'Should call CompanyServiceMock Get clients');
     deepEqual(user, expectedUser, 'Should return expected user');
@@ -40,10 +40,10 @@ test('blGetUserById', t => {
     const userNotFoundError = new CustomError(UserNotFound);
 
     try {
-        await blGetUserById({userId: nonExistingId});
+      await blGetUserById({ userId: nonExistingId });
     } catch(error) {
-        ok(CompanyAPIServiceMock.getClients.calledOnce, 'Should call CompanyServiceMock Get clients');
-        deepEqual(error, userNotFoundError,'Shoud throw UserNotFound error');
+      ok(CompanyAPIServiceMock.getClients.calledOnce, 'Should call CompanyServiceMock Get clients');
+      deepEqual(error, userNotFoundError, 'Shoud throw UserNotFound error');
     }
 
     end();

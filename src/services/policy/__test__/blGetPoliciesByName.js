@@ -6,8 +6,8 @@ import CustomError from 'CustomError';
 
 const CompanyAPIServiceMock = {
   '@noCallThru': true,
-   getClients: stub(),
-   getPolicies: stub(),
+  getClients: stub(),
+  getPolicies: stub(),
 };
 
 const existingName = 'john';
@@ -15,7 +15,7 @@ const nonExistingName = 'mark';
 
 const expectedUser = { name: existingName, id: 1234 };
 const clientsMock = {
-    clients: [expectedUser]
+  clients: [expectedUser],
 };
 
 const expectedPolicy = [{ name: existingName, policyId: 4321, clientId: 1234 }];
@@ -31,7 +31,7 @@ test('blGetPoliciesByName', t => {
     CompanyAPIServiceMock.getClients.resolves(clientsMock);
     CompanyAPIServiceMock.getPolicies.resolves(policiesMock);
 
-    const policies = await blGetPoliciesByName({userName: existingName});
+    const policies = await blGetPoliciesByName({ userName: existingName });
 
     ok(CompanyAPIServiceMock.getClients.calledOnce, 'Should call CompanyServiceMock Get clients');
     ok(CompanyAPIServiceMock.getPolicies.calledOnce, 'Should call CompanyServiceMock Get policies');
@@ -47,10 +47,10 @@ test('blGetPoliciesByName', t => {
     const userNotFoundError = new CustomError(UserNotFound);
 
     try {
-        await blGetPoliciesByName({userName: nonExistingName});
+      await blGetPoliciesByName({ userName: nonExistingName });
     } catch(error) {
-        ok(CompanyAPIServiceMock.getClients.calledOnce, 'Should call CompanyServiceMock Get clients');
-        deepEqual(error, userNotFoundError,'Shoud throw UserNotFound error');
+      ok(CompanyAPIServiceMock.getClients.calledOnce, 'Should call CompanyServiceMock Get clients');
+      deepEqual(error, userNotFoundError, 'Shoud throw UserNotFound error');
     }
 
     end();

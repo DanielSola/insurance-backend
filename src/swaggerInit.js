@@ -9,7 +9,7 @@ const options = {
       version: '0.0.0',
     },
     securityDefinitions: {
-      Secret: 
+      Secret:
         {
           type: 'apiKey',
           name: 'x-auth-secret',
@@ -19,7 +19,7 @@ const options = {
         type: 'apiKey',
         name: 'email',
         in: 'header',
-      }
+      },
     },
     basePath: '',
   },

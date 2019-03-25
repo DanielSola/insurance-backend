@@ -1,4 +1,4 @@
-import { selectRequestHistory } from "repositories";
+import { selectRequestHistory } from 'repositories';
 
 const blGetRequestHistory = async () => {
   const requestHistory = await selectRequestHistory({});

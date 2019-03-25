@@ -6,8 +6,8 @@ import CustomError from 'CustomError';
 
 const CompanyAPIServiceMock = {
   '@noCallThru': true,
-   getClients: stub(),
-   getPolicies: stub(),
+  getClients: stub(),
+  getPolicies: stub(),
 };
 
 const existingPolicyId = 1234;
@@ -25,7 +25,7 @@ test('blGetPolicyById', t => {
   t.test('blGetPolicyById returns user policies', async ({ ok, deepEqual, end }) => {
     CompanyAPIServiceMock.getPolicies.resolves(policiesMock);
 
-    const policies = await blGetPolicyById({policyId: existingPolicyId});
+    const policies = await blGetPolicyById({ policyId: existingPolicyId });
 
     ok(CompanyAPIServiceMock.getPolicies.calledOnce, 'Should call CompanyServiceMock Get policies');
     deepEqual(policies, expectedPolicy, 'Should return expected policy');
@@ -40,10 +40,10 @@ test('blGetPolicyById', t => {
     const policyNotFound = new CustomError(PolicyNotFound);
 
     try {
-        await blGetPolicyById({policyId: nonExistingPolicyId});
+      await blGetPolicyById({ policyId: nonExistingPolicyId });
     } catch(error) {
-        ok(CompanyAPIServiceMock.getPolicies.calledOnce, 'Should call CompanyServiceMock Get clients');
-        deepEqual(error, policyNotFound,'Shoud throw PolicyNotFound error');
+      ok(CompanyAPIServiceMock.getPolicies.calledOnce, 'Should call CompanyServiceMock Get clients');
+      deepEqual(error, policyNotFound, 'Shoud throw PolicyNotFound error');
     }
 
     end();
