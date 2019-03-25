@@ -7,6 +7,7 @@ import '@babel/polyfill';
 import routes from 'routes';
 import logger from 'logger';
 import { security, authorization } from 'middlewares';
+import swaggerInit from './swaggerInit';
 
 const app = express();
 
@@ -32,6 +33,8 @@ app.get('/', (req, res) => {
 app.get('/ping', (req, res) => {
   res.send('pong');
 });
+
+swaggerInit(app);
 
 if (LOG) {
   app.use(morgan('combined'));
