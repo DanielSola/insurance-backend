@@ -21,6 +21,6 @@ export SENTRY_ID=id
 #POSTGRESSQL
 export PG_USER=postgres
 export PG_HOST=postgres
-export PG_DATABASE=content
+export PG_DATABASE=insurance_backend
 export PG_PASSWORD=postgres
 export PG_PORT=5432
