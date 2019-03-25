@@ -10,5 +10,9 @@ if [[ -z $developmentNet ]]; then
   docker network create development
 fi
 
+echo  "Running postgres"
+bash ./postgres/run-docker.sh
+
 echo "Launching Insurance API Rest container..."
 docker-compose up -d --build
+

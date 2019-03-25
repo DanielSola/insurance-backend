@@ -17,3 +17,10 @@ export SENTRY_ENVIRONMENT=foo
 export SENTRY_API_KEY=foo:bar
 export SENTRY_URL=foo
 export SENTRY_ID=id
+
+#POSTGRESSQL
+export PG_USER=postgres
+export PG_HOST=postgres
+export PG_DATABASE=content
+export PG_PASSWORD=postgres
+export PG_PORT=5432

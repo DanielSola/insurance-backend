@@ -1,0 +1,36 @@
+version: '3'
+services:
+  postgres:
+    container_name: postgres
+    build:
+      context: .
+    restart: always
+    environment:
+      PG_USER: $PG_USER
+      PG_DATABASE: $PG_DATABASE
+      PG_PASSWORD: $PG_PASSWORD
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  postgres-admin:
+    image: fenglc/pgadmin4
+    container_name: postgres-admin
+    restart: always
+    environment:
+      DEFAULT_USER: test
+      DEFAULT_PASSWORD: test
+    volumes:
+      - ./data/pgadmin:/var/lib/pgadmin
+    ports:
+      - 5050:5050
+volumes:
+  pgdata:
+    driver: local
+
+networks:
+  default:
+    external:
+      name: development
