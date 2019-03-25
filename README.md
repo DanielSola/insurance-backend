@@ -27,7 +27,7 @@ Three Docker containers will be created.
 * postres: PostgreSQL database used to store request history
 * postgres-admin: PostgreSQL GUI, accessible in localhost:5050	
 
-## How to make request
+## How to make requests
 
 Use Swagger or Postman to make request. All requests must contain the following headers: 
 * Secret
