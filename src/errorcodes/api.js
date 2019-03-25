@@ -1,10 +1,10 @@
 export const InvalidSecret = {
-    httpCode: 403,
+    httpCode: 401,
     message: 'Invalid Secret',
 };
 
 export const MissingHeaderEmail = {
-    httpCode: 402,
+    httpCode: 422,
     message: `Missing header 'email'`,
 };
 
@@ -14,6 +14,6 @@ export const UserNotFound = {
 };
 
 export const UserNotAuthorized = {
-    httpCode: 405,
+    httpCode: 401,
     message: 'User not authorized'
 };
