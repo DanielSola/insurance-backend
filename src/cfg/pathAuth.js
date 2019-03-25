@@ -1,10 +1,10 @@
 const paths = [
   {
-    route: "/user/id/",
+    route: "/user/id",
     authorizedRoles: ["admin", "user"],
   },
   {
-    route: "/user/name/",
+    route: "/user/name",
     authorizedRoles: ["admin", "user"],
   },
   {
@@ -14,8 +14,11 @@ const paths = [
   {
     route: "/policy/policyId",
     authorizedRoles: ["admin"],
-},
-
+  },
+  {
+    route: "/history",
+    authorizedRoles: ["admin"],
+  },
 ];
 
 export default paths;
