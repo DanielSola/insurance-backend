@@ -152,7 +152,7 @@
       ],
       "semi": 1,
       "sort-vars": 1,
-      "sort-keys": 1,
+      "sort-keys": 0,
       "space-before-blocks": 1,
       "space-before-function-paren": [
         1,

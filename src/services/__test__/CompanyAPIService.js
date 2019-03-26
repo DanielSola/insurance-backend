@@ -24,7 +24,7 @@ test('services/CompanyAPIService ', t => {
     end();
   });
 
-  t.test('CompanyAPIService/getClients error', async ({ deepEqual, ok, end }) => {
+  t.test('CompanyAPIService/getClients error', async ({ ok, end }) => {
     getStub.throws();
 
     try {
@@ -51,7 +51,7 @@ test('services/CompanyAPIService ', t => {
     end();
   });
     
-  t.test('CompanyAPIService/getPolicies error', async ({ deepEqual, ok, end }) => {
+  t.test('CompanyAPIService/getPolicies error', async ({ ok, end }) => {
     getStub.throws();
 
     try {

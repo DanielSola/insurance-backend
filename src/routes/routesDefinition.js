@@ -21,6 +21,8 @@
    *         description: Correct user Sent
    *       401:
    *         description: Invalid Secret
+   *       404:
+   *         description: User not found
    */
 
 /**
@@ -46,6 +48,8 @@
    *         description: Correct user Sent
    *       401:
    *         description: Invalid Secret
+   *       404:
+   *         description: User not found
    */
   
 /**
