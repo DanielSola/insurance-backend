@@ -1,7 +1,7 @@
 # API GLOBAL
-export NODE_ENV=foo
-export PORT=foo
-export SECRET=foo
+export NODE_ENV=dev
+export PORT=5842
+export SECRET=InsuranceSecret
 export VERBOSE=info
 
 # API URLS
