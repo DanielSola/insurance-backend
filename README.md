@@ -15,7 +15,7 @@ Demo backend in NodeJS containing the following endpoints:
 * Swagger: Endpoints can be tested through Swagger. Run localhost:port/api-docs to open Swagger. 
 * Authorization: A Secret is required for every request. To be set in services.envar
 * Authentication: Policy related and history endpoints are only available to users with admin role. 
-* Unit tests: Run unit tests with command `npm run test`
+* Unit tests: Run unit tests with command `npm install & npm run test`
 
 ## How to run
 * Fill environment variables in services.envar.dist
