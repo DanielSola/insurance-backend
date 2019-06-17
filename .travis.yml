@@ -1,0 +1,9 @@
+sudo: required
+services: 
+  - docker
+
+before_install:
+  - docker build -t insurance-backend -f Dockerfile .
+
+script: 
+  - docker run insurance-backend npm run test

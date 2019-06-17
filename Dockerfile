@@ -20,4 +20,4 @@ RUN if [ "$NODE_ENV" == "production" ]; then npm run build; fi
 COPY entrypoint.sh /
 RUN chmod 755 /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+RUN npm run build
